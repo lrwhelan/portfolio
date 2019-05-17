@@ -27,8 +27,18 @@ class AboutPage extends Component {
                         Back to Menu
                     </Button>
                 </div>
-                <div style={{border: '1px solid #00FF3B', borderRadius: '0.2rem', color: 'white', padding: '1rem 1rem 1rem 1rem'}}>
-                    This is some text.
+                <div style={{border: '1px solid #00FF3B', borderRadius: '0.2rem', color: 'white', padding: '1rem 1rem 1rem 1rem',  backgroundColor: 'black', fontSize: '1.2rem'}}>
+                    <div>
+                        I’m a fourth year Computer Engineering student at Memorial University of Newfoundland.
+                    </div>
+                    <br />
+                    <div>
+                        I’m passionate about development, and I love being creative and solving problems.
+                    </div>
+                    <br />
+                    <div>
+                        When I’m not working, you’ll find me travelling, painting, drawing or reading.
+                    </div>
                 </div>
             </div>
         )

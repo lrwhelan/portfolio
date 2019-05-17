@@ -27,8 +27,13 @@ class ContactPage extends Component {
                         Back to Menu
                     </Button>
                 </div>
-                <div style={{border: '1px solid #0076FF', borderRadius: '0.2rem', color: 'white', padding: '1rem 1rem 1rem 1rem'}}>
-                    This is some text.
+                <div style={{border: '1px solid #0076FF', borderRadius: '0.2rem', color: 'white', padding: '1rem 1rem 1rem 1rem',  backgroundColor: 'black', fontSize: '1.2rem'}}>
+                    Check out my work on GitHub or send me a LinkedIn message below.
+                    <div>
+                        <a href='www.google.com'>
+                            <img src={'GitHub-Mark-Light-32px.png'} width='32' height='32' />
+                        </a>
+                    </div>
                 </div>
             </div>
         )
