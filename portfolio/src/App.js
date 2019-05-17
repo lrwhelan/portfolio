@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import './App.css';
+
 import LandingPage from './LandingPage';
 import ExperiencePage from './ExperiencePage';
+import ContactPage from './ContactPage';
+import AboutPage from './AboutPage';
 
 
 const particlesOptions = {
@@ -133,9 +136,9 @@ class App extends Component {
         case 'Experience':
           return <ExperiencePage changePage={this.handlePageChange} />;
         case 'About':
-          return <div>About</div>;
+          return <AboutPage changePage={this.handlePageChange} />;
         case 'Contact':
-          return <div>Contact</div>;
+          return <ContactPage changePage={this.handlePageChange} />;
         default:
           return <LandingPage />;
     }
