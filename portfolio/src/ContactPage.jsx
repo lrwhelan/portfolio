@@ -33,7 +33,7 @@ class ContactPage extends Component {
                         <a href='https://github.com/lrwhelan'>
                             <img alt={'GitHub'} src={'GitHub-Mark-Light-64px.png'} width='64' height='64' />
                         </a>
-                        <a href='www.linkedin.com/in/lauren-whelan'>
+                        <a href='https://www.linkedin.com/in/lauren-whelan'>
                             <img alt={'LinkedIn'} src={'In-White-72.png'} width='64' height='64' />
                         </a>
                     </div>
