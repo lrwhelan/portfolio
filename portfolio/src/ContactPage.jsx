@@ -31,7 +31,7 @@ class ContactPage extends Component {
                     Check out my work on GitHub or send me a LinkedIn message below.
                     <div>
                         <a href='www.google.com'>
-                            <img src={'https://github.com/lrwhelan/portfolio/blob/master/portfolio/src/GitHub-Mark-Light-32px.png'} width='32' height='32' />
+                            <img src={'GitHub-Mark-Light-32px.png'} width='32' height='32' />
                         </a>
                     </div>
                 </div>
