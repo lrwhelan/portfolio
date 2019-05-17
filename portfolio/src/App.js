@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import './App.css';
 import LandingPage from './LandingPage';
+import ExperiencePage from './ExperiencePage';
 
 
 const particlesOptions = {
@@ -128,9 +129,9 @@ class App extends Component {
   renderPage = () => {
     switch(this.state.currentPage) {
         case 'Landing':
-          return <LandingPage changePage={this.handlePageChange}/>;
+          return <LandingPage changePage={this.handlePageChange} />;
         case 'Experience':
-          return <div>Experience</div>;
+          return <ExperiencePage changePage={this.handlePageChange} />;
         case 'About':
           return <div>About</div>;
         case 'Contact':
@@ -140,11 +141,9 @@ class App extends Component {
     }
   };
 
-
   handlePageChange = (page) => {
     this.setState({currentPage: page})
   };
-
 
   render() {
     return (
