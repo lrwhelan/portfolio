@@ -11,6 +11,18 @@ class LandingPage extends Component {
         }
     }
 
+    handleExperienceClick = () => {
+        this.props.changePage('Experience');
+    };
+
+    handleAboutClick = () => {
+        this.props.changePage('About');
+    };
+
+    handleContactClick = () => {
+        this.props.changePage('Contact');
+    };
+
     render() {
         return (
             <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', margin: '20rem 0 0 0'}}>
@@ -18,9 +30,27 @@ class LandingPage extends Component {
                     Hello! I'm Lauren Whelan
                 </div>
                 <div style={{padding: '5rem 0 0 0', display: 'flex', justifyContent: 'space-between', width: '45rem'}}>
-                    <Button variant='outline-danger' style={{fontSize: '1.3rem', width: '11.5rem'}}>Experience</Button>
-                    <Button variant='outline-success' style={{fontSize: '1.3rem', width: '11.5rem'}}>About Me</Button>
-                    <Button variant='outline-primary' style={{fontSize: '1.3rem', width: '11.5rem'}}>Contact</Button>
+                    <Button
+                        variant='outline-danger'
+                        style={{fontSize: '1.3rem', width: '11.5rem'}}
+                        onClick={this.handleExperienceClick}
+                    >
+                        Experience
+                    </Button>
+                    <Button
+                        variant='outline-success'
+                        style={{fontSize: '1.3rem', width: '11.5rem'}}
+                        onClick={this.handleAboutClick}
+                    >
+                        About Me
+                    </Button>
+                    <Button
+                        variant='outline-primary'
+                        style={{fontSize: '1.3rem', width: '11.5rem'}}
+                        onClick={this.handleContactClick}
+                    >
+                        Contact
+                    </Button>
                 </div>
             </div>
         )

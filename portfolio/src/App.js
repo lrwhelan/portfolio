@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 import './App.css';
 import LandingPage from './LandingPage';
@@ -116,21 +116,52 @@ const particlesOptions = {
 };
 
 
-function App() {
-  return (
-    <div className='App'>
-      <Particles
-        className='particles'
-        style={{
-          width: '100%',
-          height: '100%',
-          background: `#000000`
-        }}
-        params={particlesOptions}
-      />
-      <LandingPage />
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      currentPage: 'Landing'
+    }
+  }
+
+  renderPage = () => {
+    switch(this.state.currentPage) {
+        case 'Landing':
+          return <LandingPage changePage={this.handlePageChange}/>;
+        case 'Experience':
+          return <div>Experience</div>;
+        case 'About':
+          return <div>About</div>;
+        case 'Contact':
+          return <div>Contact</div>;
+        default:
+          return <LandingPage />;
+    }
+  };
+
+
+  handlePageChange = (page) => {
+    this.setState({currentPage: page})
+  };
+
+
+  render() {
+    return (
+          <div className='App'>
+              <Particles
+                  className='particles'
+                  style={{
+                      width: '100%',
+                      height: '100%',
+                      background: `#000000`
+                  }}
+                  params={particlesOptions}
+              />
+              { this.renderPage() }
+          </div>
+      );
+  }
 }
 
 export default App;
