@@ -17,7 +17,7 @@ class AboutPage extends Component {
 
     render() {
         return(
-            <div style={{padding: '5rem 5rem 5rem 5rem'}}>
+            <div style={{margin: '5rem 5rem 5rem 5rem'}}>
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '0 0 2rem 0'}}>
                     <div style={{color: '#00FF3B', fontSize: '1.6rem'}}>About Me</div>
                     <Button
