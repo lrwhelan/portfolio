@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import Button from 'react-bootstrap/Button';
+import PropTypes from "prop-types";
 
 
 class LandingPage extends Component {
@@ -25,11 +26,11 @@ class LandingPage extends Component {
 
     render() {
         return (
-            <div style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', margin: '20rem 0 0 0'}}>
-                <div style={{color: 'white', fontSize: '2.5rem'}}>
+            <div className='landing-page-container'>
+                <div className='landing-page-title'>
                     Hello! I'm Lauren Whelan
                 </div>
-                <div style={{padding: '5rem 0 0 0', display: 'flex', justifyContent: 'space-between', width: '45rem'}}>
+                <div className='landing-page-button-container'>
                     <Button
                         variant='outline-danger'
                         style={{fontSize: '1.3rem', width: '11.5rem'}}
@@ -57,5 +58,9 @@ class LandingPage extends Component {
     }
 
 }
+
+LandingPage.propTypes = {
+    changePage: PropTypes.func.isRequired,
+};
 
 export default LandingPage;

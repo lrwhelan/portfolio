@@ -140,7 +140,7 @@ class App extends Component {
         case 'Contact':
           return <ContactPage changePage={this.handlePageChange} />;
         default:
-          return <LandingPage />;
+          return <LandingPage changePage={this.handlePageChange} />;
     }
   };
 
