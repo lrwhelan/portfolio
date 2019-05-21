@@ -26,3 +26,57 @@ code {
   left: 0;
   z-index: -1;
 }
+
+.page-container {
+  margin: 5rem;
+}
+
+.page-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0 2rem 0;
+}
+
+.page-body {
+  font-size: 1.6rem;
+}
+
+.page-body-content {
+  border-radius: 0.2rem;
+  color: white;
+  padding: 1rem;
+  background-color: black;
+  font-size: 1.2rem;
+}
+
+.page-logo-container {
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.contact-page-body {
+  color: #0076FF;
+}
+
+.contact-page-body-content {
+  border: 1px solid #0076FF;
+}
+
+.about-page-body {
+  color: #00FF3B;
+}
+
+.about-page-body-content {
+  border: 1px solid #00FF3B;
+}
+
+.experience-page-body {
+  color: #F00025;
+}
+
+.experience-page-body-content {
+  border: 1px solid #F00025;
+}

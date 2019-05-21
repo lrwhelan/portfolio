@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 
 
@@ -17,9 +18,9 @@ class ExperiencePage extends Component {
 
     render() {
         return(
-            <div style={{margin: '5rem 5rem 5rem 5rem'}}>
-                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '0 0 2rem 0'}}>
-                    <div style={{color: '#F00025', fontSize: '1.6rem'}}>Experience</div>
+            <div className='page-container'>
+                <div className='page-title'>
+                    <div className='page-body experience-page-body'>Experience</div>
                     <Button
                         variant='dark'
                         onClick={this.handleClick}
@@ -27,7 +28,7 @@ class ExperiencePage extends Component {
                         Back to Menu
                     </Button>
                 </div>
-                <div style={{border: '1px solid #F00025', borderRadius: '0.2rem', color: 'white', padding: '1rem 1rem 1rem 1rem', backgroundColor: 'black', fontSize: '1.2rem'}}>
+                <div className='page-body-content experience-page-body-content'>
                     <div>
                         I’ve completed 16 months of work terms; eight of which I have been doing development work.
                     </div>
@@ -63,5 +64,9 @@ class ExperiencePage extends Component {
         )
     }
 }
+
+ExperiencePage.propTypes = {
+    changePage: PropTypes.func.isRequired,
+};
 
 export default ExperiencePage;

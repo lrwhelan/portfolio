@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
+import PropTypes from 'prop-types';
 
 
 class ContactPage extends Component {
@@ -17,9 +18,9 @@ class ContactPage extends Component {
 
     render() {
         return(
-            <div style={{margin: '5rem 5rem 5rem 5rem'}}>
-                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '0 0 2rem 0'}}>
-                    <div style={{color: '#0076FF', fontSize: '1.6rem'}}>Contact</div>
+            <div className='page-container'>
+                <div className='page-title'>
+                    <div className='page-body contact-page-body'>Contact</div>
                     <Button
                         variant='dark'
                         onClick={this.handleClick}
@@ -27,9 +28,9 @@ class ContactPage extends Component {
                         Back to Menu
                     </Button>
                 </div>
-                <div style={{border: '1px solid #0076FF', borderRadius: '0.2rem', color: 'white', padding: '1rem 1rem 1rem 1rem',  backgroundColor: 'black', fontSize: '1.2rem'}}>
+                <div className='page-body-content contact-page-body-content'>
                     Check out my work on GitHub or send me a LinkedIn message below.
-                    <div style={{margin: '5rem 0 5rem 0', display: 'flex', flexDirection: 'row', justifyContent: 'space-around'}}>
+                    <div className='page-logo-container'>
                         <a href='https://github.com/lrwhelan'>
                             <img alt={'GitHub'} src={'GitHub-Mark-Light-64px.png'} width='64' height='64' />
                         </a>
@@ -42,5 +43,9 @@ class ContactPage extends Component {
         )
     }
 }
+
+ContactPage.propTypes = {
+    changePage: PropTypes.func.isRequired,
+};
 
 export default ContactPage;

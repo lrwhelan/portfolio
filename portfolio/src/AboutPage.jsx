@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
+import PropTypes from 'prop-types';
 
 
 class AboutPage extends Component {
@@ -17,9 +18,9 @@ class AboutPage extends Component {
 
     render() {
         return(
-            <div style={{margin: '5rem 5rem 5rem 5rem'}}>
-                <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: '0 0 2rem 0'}}>
-                    <div style={{color: '#00FF3B', fontSize: '1.6rem'}}>About Me</div>
+            <div className='page-container'>
+                <div className='page-title'>
+                    <div className='page-body about-page-body'>About Me</div>
                     <Button
                         variant='dark'
                         onClick={this.handleClick}
@@ -27,7 +28,7 @@ class AboutPage extends Component {
                         Back to Menu
                     </Button>
                 </div>
-                <div style={{border: '1px solid #00FF3B', borderRadius: '0.2rem', color: 'white', padding: '1rem 1rem 1rem 1rem',  backgroundColor: 'black', fontSize: '1.2rem'}}>
+                <div className='page-body-content about-page-body-content'>
                     <div>
                         I’m a fourth year Computer Engineering student at Memorial University of Newfoundland.
                     </div>
@@ -44,5 +45,9 @@ class AboutPage extends Component {
         )
     }
 }
+
+AboutPage.propTypes = {
+    changePage: PropTypes.func.isRequired,
+};
 
 export default AboutPage;
